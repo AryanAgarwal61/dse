@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test New Window</title>
+</head>
+<body>
+  <button onclick="openNewWindow()">Open new window</button>
+  <script>
+    function openNewWindow() {
+      // Open a new window with specified properties
+      var myWindow = window.open("", "newWindow", "width=500,height=400");
+
+      myWindow.document.write("<h1>Hello, new window!</h1>");
+      myWindow.document.write("<p>This is new window.</p>");
+    }
+  </script>
+</body>
+</html>

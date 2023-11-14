@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+ background: #010101;
+ overflow: hidden;
+ 
+}
+
+#star{
+position: absolute;
+left: 50%;
+top: 50%;
+width: 250px;
+height: 250px;
+background: white;
+border-radius: 50%;
+box-shadow: 0 0 50px rgb(255, 255, 255);
+transform:translate(-50%,-50%);
+}
+
+#planet{
+    position: absolute;
+    left: 10px;
+    top: 1px;
+    background: rgb(0, 0, 0);
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px rgb(49, 49, 49)  ;
+
+    animation: eclipse 10s infinite linear;
+    transform: rotate(-20deg);
+    transform-origin: 50% 150%;
+}
+
+
+@keyframes eclipse {
+ 0% {
+      transform: rotate(-60deg); 
+ }
+ 
+ 90% {
+      transform: rotate(30deg); 
+ }
+ 
+ 100%{
+   transform: rotate(300deg);
+ }
+}

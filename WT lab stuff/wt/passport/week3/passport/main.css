@@ -1,0 +1,14 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin: 80px auto;
+    padding:10% auto;
+}
+
+table{
+    background-color:rgb(248, 246, 237);
+    border:solid rgb(95, 58, 3);
+}
+.heading{
+    text-align: center;
+}

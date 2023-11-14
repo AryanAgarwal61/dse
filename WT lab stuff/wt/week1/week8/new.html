@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup Page</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="submit"] {
+        margin-top: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #3e8e41;
+      }
+      .error-message {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Signup Page</h1>
+    <form onsubmit="return validateForm()">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <div class="error-message" id="password-error"></div>
+      <input type="submit" value="Signup">
+    </form>
+    <script>
+      function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var passwordError = document.getElementById("password-error");
+
+        // Check username starts with uppercase letter
+        if (username[0] !== username[0].toUpperCase()) {
+          alert("Username must start with an uppercase letter.");
+          return false;
+        }
+
+        // Check password is at least 7 characters
+        if (password.length < 7) {
+          passwordError.innerHTML = "Password must be at least 7 characters.";
+          return false;
+        } else {
+          passwordError.innerHTML = "";
+        }
+
+        return true;
+      }
+    </script>
+  </body>
+</html>

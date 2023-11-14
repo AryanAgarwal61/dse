@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Passport</title>
+</head>
+<body>
+    <table cellspacing="15">
+        <form >
+            <div class="heading">
+            <tr>
+                <td colspan="2" text-align:center;><h1>User Regstration</h1></td>
+            </tr>
+            </div>
+            <tr>
+                <td>
+                    <label for="register">Register to apply at</label>
+                </td>
+                <td>CPV Delhi <input type="radio"  name="pass" id="delhi"><br>
+                Passport office <input type="radio" name="pass" id="others"></td>
+                <td><small>Select the 'CPV Delhi' option to apply for Diplomatic/Official passport at Consular, Passport and Visa (CPV) division, Delhi.</small></td>
+            </tr>
+
+            <tr>
+                <td><label for="Passport office">Passport Office <br><small>(As per Present Residential Address)</small></label></td>
+                <td><select name="state" id="state">
+                    <option value="">Ahmedabad</option>
+                    <option value="">Amritsar</option>
+                    <option value="">bareilly</option>
+                    <option value="">Benagaluru</option>
+                    <option value="">Bhopal</option>
+                    <option value="">Bhubaneshwar</option>
+                    <option value="">Chandigarh</option>
+                    <option value="">Chennai</option>
+                </select></td>
+                <td><small>Tibetan Refugees applying for Identity Certificate must register with 'Delhi' Passport Office.</small></td>
+            </tr>
+            
+            <tr>
+                <td><label for="name">Given name <small>(Max45 Characters)*:</label> </small></td>
+                <td><input type="text" id="name"></td>
+                <td><small><b>First Name + Middle Name</b>
+                    Initials and honorifics (e.g. Dr.,Col.,etc.) are not allowed.</small></td>
+            </tr>
+            
+            <tr>
+               <td><label for="sn">Surname:<small>(Max 45 Characters)*:</small></td>
+               <td><input type="text" id="sn"></td>
+            </tr>
+            <tr>
+                <td><label for="datee"></label> Date of Birth(DD/MM/YYYY)*</td>
+                <td><input type="date" name="date" id="date"></td>
+            </tr>
+
+
+             <tr>
+                    <td><label for="fname">Email Id: <small>(Max 35 Characters)*</small></label></td>
+                    <td><input type="email" id="fname" name="fname"></td>
+            </tr>
+
+            <tr>
+                <td><label for="id"> Do you want your Login id to be the name as E-mail id?</label></td>
+                <td>Yes<input type="radio" name="email" id="yes">       No<input type="radio" name="email" id="no"></td>
+            </tr>
+
+            <tr>
+                    <td><label for="lid">Login Id:</label></td>
+                    <td><input type="text" id="lid"></td></td>
+            </tr>
+
+            <tr>
+                <td><label for="psd"> Password*:</label></td>
+                <td><input type="password" id="psd"> </td>
+                <td><a href="https://portal2.passportindia.gov.in/AppOnlineProject/onlineHtml/passwordPolicy.html">Password Policy</a></td>
+            </tr>
+
+            <tr>
+                <td><label for="cpsd">Confirm Password*:</label></td>
+                <td><input type="password"  id="cpsd"></td>
+            </tr>
+
+            <tr>
+                <td><label for="hint">Hint Question*:</label></td>
+                <td><select name="state" id="state">
+                    <option value="">----------Select----------</option>
+                    <option value="">Birth Place</option>
+                    <option value="">Favourate color</option>
+                    <option value="">Favourate Food</option>
+                    <option value="">Favourate Color</option>
+                    <option value="">Favourate Sport</option>
+                </select></td>
+            </tr>
+
+            <tr>
+                <td><label for="ans">Hint Answer*:</label></td>
+                <td><input type="text" id="ans"></td>
+            </tr>
+
+            <tr>
+                <td><label for="cap">Enter the Characters Displayed*:</label></td>
+                <td><img src="captcha.jpg" alt="captcha" height="50%" width="100"></td>
+                
+                <tr><td>
+                    <td><input type="text" id="cap"></td>
+                </td>
+
+                </tr>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button type="submit">Register</button>
+                    <button type="submit">clear</button>
+                </td>
+            </tr>
+            </form>
+    </table>
+</body>
+</html>

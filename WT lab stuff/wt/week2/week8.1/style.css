@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-color: #c1bcda;
+}
+#regForm {
+    background-color: #ffffff;
+    margin: 55px auto;
+    font-family: Raleway;
+    padding: 40px;
+    width: 70%;
+    min-width: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+h1 {
+    text-align: center;  
+}
+input{
+    margin: 10px;
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
+}
+label,fieldset{
+    margin: 10px;
+}
+input[type="radio"]{
+  margin: -300px;
+}
+input.invalid {
+    background-color: #ffdddd;
+}
+.tab {
+    display: none;
+}
+button {
+    background-color: #0423aa;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-family: Raleway;
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.8;
+}
+#prevBtn {
+    background-color: #bbbbbb;
+}
+.step {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbbbbb;
+    border: none;  
+    border-radius: 50%;
+    display: inline-block;
+    opacity: 0.5;
+}
+.step.active {
+    opacity: 1;
+}
+.step.finish {
+    background-color: #1504aa;
+}
+.error{
+  color: red;
+  margin: 10px;
+}
