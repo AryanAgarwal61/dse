@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content=
+    "width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="">
+</head>
+<body>
+    <p>
+        Mouse pos: <b><span id="mouse-pos"></span></b>
+      </p>
+    <script>
+      const mousePosText = document.getElementById('mouse-pos');
+let mousePos = { x: undefined, y: undefined };
+
+window.addEventListener('mousemove', (event) => {
+  mousePos = { x: event.clientX, y: event.clientY };
+  mousePosText.textContent = `(${mousePos.x}, ${mousePos.y})`;
+});
+    </script>
+
+</body>
+</html>

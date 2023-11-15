@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookies Demo</title>
+    <script>
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i];
+                while (cookie.charAt(0) === ' ') {
+                    cookie = cookie.substring(1, cookie.length);
+                }
+                if (cookie.indexOf(nameEQ) === 0) {
+                    return cookie.substring(nameEQ.length, cookie.length);
+                }
+            }
+            return null;
+        }
+
+        function displayWelcomeMessage() {
+            var userName = getCookie("user_name");
+            var lastAccess = getCookie("last_access");
+            if (userName) {
+                var password = prompt("Please enter your password:");
+                if (password === "don" || password === "password") {
+                    document.getElementById("welcome-message").innerHTML =
+                        "Welcome back, " + userName + "!<br>Last accessed on: " + lastAccess;
+                } else {
+                    alert("Incorrect password. Access denied.");
+                    document.getElementById("welcome-message").innerHTML = "Access denied.";
+                }
+            } else {
+                var enteredName = prompt("Please enter your name:");
+                if (enteredName) {
+                    var password = prompt("Please set a password ");
+                    if (password === "don" || password === "password") {
+                        var currentDate = new Date().toUTCString();
+                        setCookie("user_name", enteredName, 365);
+                        setCookie("last_access", currentDate, 365);
+                        alert("Password set successfully. Welcome, " + enteredName + "!");
+                        document.getElementById("welcome-message").innerHTML =
+                            "Welcome, " + enteredName + "!<br>First time visiting!";
+                    } else {
+                        alert("Wrong Password mate. Access denied.");
+                        document.getElementById("welcome-message").innerHTML = "Access denied.";
+                    }
+                } else {
+                    alert("Name is required. Access denied.");
+                    document.getElementById("welcome-message").innerHTML = "Access denied.";
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="displayWelcomeMessage()">
+    <h1>Welcome to our website</h1>
+    <div id="welcome-message"></div>
+</body>
+</html>
